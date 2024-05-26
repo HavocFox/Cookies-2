@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Chocolate Chip Cookies</title>
+    <style>
+        .header{
+            text-align: center;
+            color: pink;
+            font-family: cursive;
+            padding: 10px;
+        }
+
+        .intropara{
+            text-align: center;
+            color: rgb(101, 0, 168);
+            font-family: monospace;
+            padding: 10px;
+        }
+
+        .recipe{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            background: rgb(210, 231, 255);
+            font-family: cursive;
+            border-style: dotted;
+            padding: 10px;
+        }
+
+        .end{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: monospace;
+            padding: 10px;
+        }
+
+        div p {
+            background-color: rgb(255, 255, 255);
+            margin-left: 10px;
+            margin-right: 10px;
+            padding: 10px;
+        }
+
+        a:hover {
+            background-color: rgb(255, 159, 159);
+        }
+
+        a:visited {
+            color: rgb(66, 0, 62);
+        }
+
+        .recipe-button {
+            background-color: rgb(255, 100, 100);
+            border-radius: 8px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: cursive;
+        }
+
+        .recipe-button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            }
+
+        .recipe-button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        }
+
+        .recipe-button:hover span {
+            padding-right: 25px;
+        }
+
+        .recipe-button:hover span:after {
+        opacity: 1;
+        right: 0;
+        }
+
+        .recipe h2 + ul {
+            border: 2px solid #000;
+        }
+
+        #intro-text {
+            font-style: italic;
+        }
+
+        #steps-list {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body style="background-color: hsl(348, 100%, 91%);">
+    <section class="intropara" id="intro-section">
+        <!-- Title header -->
+        <h1>Classic Chocolate Chip Cookies</h1>
+        <a href="https://www.ghirardelli.com/recipes/classic-chocolate-chip-cookies-rec1016">Click for a cookie!</a> <!-- Link to external recipe -->
+        <div>
+            <p id="intro-text">Grandma always used to make chocolate chip cookies for me when I was little.<br> <!-- Intro paragraph. -->
+            Just kidding, she didn't. She made mud cookies.<br>
+            This is actually my sister's recipe because she's the only one besides mom who can cook without setting the kitchen on fire.<br>
+            This recipe of hers will walk you through making lovely, edible cookies.<br></p>
+        </div>
+    </section>
+    <section class="recipe">
+        <!-- Ingredients Unordered List -->
+        <h2>Ingredients:</h2>
+        <ul>
+            <li>1 cup (2 sticks) unsalted butter, softened</li>
+            <li>3/4 cup granulated sugar</li>
+            <li>3/4 cup packed brown sugar</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>2 large eggs</li>
+            <li>2 1/4 cups all-purpose flour</li>
+            <li>1 teaspoon baking soda</li>
+            <li>1/2 teaspoon salt</li>
+            <li>2 cups semisweet chocolate chips</li>
+            <li>1 cup chopped nuts (optional)</li>
+        </ul>
+
+        <!-- Steps Ordered List -->
+        <h2>Steps:</h2>
+        <ol id="steps-list">
+            <li>Preheat the oven to 375°F (190°C). Line baking sheets with parchment paper or silicone baking mats.</li>
+            <li>In a large mixing bowl, cream together the softened butter, granulated sugar, brown sugar, and vanilla extract until light and fluffy.</li>
+            <li>Add the eggs, one at a time, beating well after each addition.</li>
+            <li>In a separate bowl, whisk together the flour, baking soda, and salt. Gradually add the dry ingredients to the wet ingredients, mixing until just combined.</li>
+            <li>Stir in the chocolate chips and chopped nuts (if using) until evenly distributed throughout the dough.</li>
+            <li>Drop rounded tablespoons of dough onto the prepared baking sheets, spacing them about 2 inches apart.</li>
+            <li>Bake in the preheated oven for 9 to 11 minutes, or until the edges are golden brown.</li>
+            <li>Remove from the oven and allow the cookies to cool on the baking sheets for a few minutes before transferring them to wire racks to cool completely.</li>
+        </ol>
+    </section>
+
+    <section class="end">
+        <!-- Secondary Header + Cookie Image -->
+        <h2>Didn't burn down your house? You should have something like this, then:</h2>
+        <img src="https://handletheheat.com/wp-content/uploads/2018/02/BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9.jpg" alt="Picture of chocolate chip cookies." style="width:600px;height:600px;"> 
+
+        <p>Don't forget to enjoy your Classic Chocolate Chip Cookies with a tall glass of milk &ndash; the perfect combination!</p>
+            <a href=recipeform.html class="recipe-button" style= "vertical-align:middle"><span> Want to submit a recipe? </span></a>
+    </section>
+</body>
+</html>

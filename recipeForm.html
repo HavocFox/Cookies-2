@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Submission</title>
+    <style>
+        body {
+            padding: 20px;
+            background-color: #fff0f5;
+        }
+
+        input, textarea, select {
+            background-color: #ffe4f8;
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+        }
+
+        .intropara {
+            text-align: left;
+            color: rgb(0, 0, 0);
+            font-family: cursive;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        .recipe-button {
+            background-color: rgb(255, 100, 100);
+            border-radius: 8px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            color: rgb(255, 255, 255);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: cursive;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .recipe-button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .recipe-button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .recipe-button:hover span {
+            padding-right: 25px;
+        }
+
+        .recipe-button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        form {
+            padding: 20px; /*Inside the form, there should be padding */
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="intropara" id="intro-section">      <!-- Main form -->
+        <h1 class="color-me-white">Recipe Submission</h1>
+        <form action="/index.html" method="POST" style="border: 1px solid black; border-radius: 20px;">
+
+            <label for="recipe-name">Recipe Name</label>
+            <input placeholder="Recipe Name" type="text" name="recipe-name" id="recipe-name" aria-required="true" required>
+            
+            <label for="author-name">Author Name</label>
+            <input placeholder="Your Name" type="text" name="author-name" id="author-name" aria-required="true" required>
+
+            <label for="contact-email">Contact Email</label>
+            <input placeholder="Contact Email" type="email" name="contact-email" id="contact-email" aria-required="true" required>
+            
+            <label for="prep-time">Preparation Time (in minutes)</label>
+            <input placeholder="Preparation Time" type="number" name="prep-time" id="prep-time" aria-required="true" required>
+            <!-- Begin dropdown list -->
+            <label for="difficulty">Difficulty Level</label>
+            <select name="difficulty" id="difficulty" aria-required="true" required>
+                <option value="" disabled selected>Select difficulty</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <label for="ingredients">Ingredients</label>
+            <textarea placeholder="List the ingredients" name="ingredients" id="ingredients" rows="5" aria-required="true" required></textarea>
+            
+            <label for="instructions">Instructions</label>
+            <textarea placeholder="Provide the cooking instructions" name="instructions" id="instructions" rows="10" aria-required="true" required></textarea>
+
+            <br>
+            <button type="submit" class="recipe-button"><span>Submit Recipe</span></button>
+        </form>
+    </section>
+</body>
+</html>
